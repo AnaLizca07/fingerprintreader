@@ -6,24 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->dateTime('timestamp');
-            $table->string('punch_type');
+            $table->unsignedInteger('user_id');
+            $table->timestamp('timestamp');
+            $table->unsignedTinyInteger('status');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('attendances');
     }

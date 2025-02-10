@@ -34,7 +34,7 @@ return [
     'zkteco' => [
         'ip' => env('ZKTECO_IP', '192.168.0.30'),
         'port' => env('ZKTECO_PORT', 4370),
-        'key' => env('ZKTECO_COMUNICATION_KEY', 0),
+        'key' => env('ZKTECO_COMUNICATION_KEY', 2121),
 ],
 
 ];

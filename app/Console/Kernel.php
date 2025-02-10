@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('attendace:sync')->everyMinute();
+        $schedule->command('attendance:sync') ->everyMinute();
     }
 
     /**
@@ -24,8 +24,4 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
-
-    protected $commands = [
-        \App\Console\Commands\TestZKTecoConnection::class
-    ];
 }
